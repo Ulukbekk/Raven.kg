@@ -7,6 +7,7 @@ class Order(models.Model):
     address = models.CharField(max_length=300, null=True, blank=True, verbose_name='Адрес')
     model = models.CharField(max_length=100, verbose_name='Модель')
     color = models.CharField(max_length=50, verbose_name='Цвет')
+    amount = models.IntegerField(verbose_name='Количество')
     size = models.IntegerField(verbose_name='Размер')
     articul = models.CharField(max_length=255, verbose_name='Артикул')
     price = models.IntegerField(verbose_name='Цена')

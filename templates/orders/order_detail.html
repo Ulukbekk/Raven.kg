@@ -15,14 +15,15 @@
     <table class="table table-bordered">
       {% for order in order %}
       <ul>
-        <li>Фио:{{ order.client }}</li>
-        <li>Инстаграм:{{ order.insta }}</li>
-        <li>Адрес:{{ order.address }}</li>
-        <li>Номер:{{ order.phone }}</li>
-        <li>Модель:{{ order.model }}</li>
-        <li>Цвет:{{ order.color }}</li>
-        <li>Размер:{{ order.size }}</li>
-        <li>Артикул:{{ order.articul }}</li>
+        <li>Фио: {{ order.client }}</li>
+        <li>Инстаграм: {{ order.insta }}</li>
+        <li>Адрес: {{ order.address }}</li>
+        <li>Номер: {{ order.phone }}</li>
+        <li>Модель: {{ order.model }}</li>
+        <li>Цвет: {{ order.color }}</li>
+        <li>Размер: {{ order.size }}</li>
+        <li>Кол-во: {{ order.amount }}</li>
+        <li>Артикул: {{ order.articul }}</li>
         <li>Дата создания:{{ order.date_created|date:"d.m.Y - G:i" }}</li>
         <li>Дата изменения:{{ order.date_modified|date:"d.m.Y - G:i" }}</li>
         <br>
