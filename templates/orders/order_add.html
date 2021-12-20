@@ -1,0 +1,20 @@
+{% extends '../base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block styles %}
+<link href="{% static 'css/form.css' %}" rel="stylesheet">
+{% endblock styles %}
+
+{% block content %}
+<div class="container">
+    <h2>Дабавить Новый Заказ</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <br>
+        <button class="btn btn-success" type="submit">Сохранить</button>
+    </form>
+
+</div>
+{% endblock content %}
