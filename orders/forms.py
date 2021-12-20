@@ -7,7 +7,7 @@ class AddOrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = ('client', 'insta', 'address', 'phone', 'model',
-                  'color', 'size', 'articul', 'price'
+                  'color', 'size', 'amount', 'articul', 'price'
                   )
 
 
@@ -15,6 +15,6 @@ class EditOrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = ('client', 'insta', 'address', 'phone', 'model',
-                  'color', 'size', 'articul', 'price', 'pending',
+                  'color', 'size', 'amount', 'articul', 'price', 'pending',
                   'in_transit', 'received', 'completed'
                   )
