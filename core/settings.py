@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-_5@mn8m7c&lyu_u5rv$%+p5=null24=4l6yt#5d84m&+lij^0y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1", "shielded-thicket-82921.herokuapp.com"]
+ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1", "ravenkg.herokuapp.com"]
 
 
 # Application definition
@@ -91,7 +91,6 @@ DATABASES = {
 #
 # db_from_env = dj_database_url.config(conn_max_age=600)
 # DATABASES['default'].update(db_from_env)
-
 
 
 #postgres://clcksrrquywqja:6c9a97a0f4113562c2557d84fd074c47eb09340a16ad4143ba4ae80cb595bc80@ec2-18-211-41-246.compute-1.amazonaws.com:5432/dbdq3vicu6vuc0
