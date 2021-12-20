@@ -49,7 +49,7 @@
     </tr>
   </thead>
   <tbody>
-  {% for order in page_obj %}
+  {% for order in orders %}
     <tr {% if order.pending == True %}
         style="background-color: #d5bbfe;"
         {% elif order.in_transit == True %}
@@ -99,9 +99,9 @@
 
  <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
-        {% if page_obj.has_previous %}
+        {% if orders.has_previous %}
             <li class="page-item">
-            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            <a class="page-link" href="?page={{ orders.previous_page_number }}">Previous</a>
           </li>
         {% else %}
             <li class="page-item disabled">
@@ -109,30 +109,30 @@
           </li>
         {% endif %}
 
-        {% if page_obj.number|add:'-4' > 1 %}
-            <li class="page-item"><a class="page-link" href="?page={{ page_obj.number|add:'-5' }}">&hellip;</a></li>
+        {% if orders.number|add:'-4' > 1 %}
+            <li class="page-item"><a class="page-link" href="?page={{ orders.number|add:'-5' }}">&hellip;</a></li>
         {% endif %}
 
-        {% for i in page_obj.paginator.page_range %}
-            {% if cars.number == i %}
+        {% for i in orders.paginator.page_range %}
+            {% if orders.number == i %}
                 <li class="page-item active" aria-current="page">
               <span class="page-link">
                 {{ i }}
                 <span class="sr-only">(current)</span>
               </span>
             </li>
-            {% elif i > page_obj.number|add:'-5' and i < page_obj.number|add:'5' %}
+            {% elif i > orders.number|add:'-5' and i < orders.number|add:'5' %}
                  <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
             {% endif %}
         {% endfor %}
 
-        {% if page_obj.paginator.num_pages > page_obj.number|add:'4' %}
-           <li class="page-item"><a class="page-link" href="?page={{ page_obj.number|add:'5' }}">&hellip;</a></li>
+        {% if orders.paginator.num_pages > orders.number|add:'4' %}
+           <li class="page-item"><a class="page-link" href="?page={{ orders.number|add:'5' }}">&hellip;</a></li>
         {% endif %}
 
-        {% if page_obj.has_next %}
+        {% if orders.has_next %}
             <li class="page-item">
-            <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+            <a class="page-link" href="?page={{ orders.next_page_number }}">Next</a>
           </li>
         {% else %}
             <li class="page-item disabled">

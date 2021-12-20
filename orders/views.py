@@ -8,9 +8,6 @@ from orders.models import Order
 
 def home_page(request):
     orders = Order.objects.filter().order_by('-date_created')
-    paginator = Paginator(orders, 20)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
     pending_orders = Order.objects.filter(pending=True)
     pending = len(pending_orders)
     in_transit_orders = Order.objects.filter(in_transit=True)
@@ -20,9 +17,12 @@ def home_page(request):
     complete_orders = Order.objects.filter(completed=True)
     complete = len(complete_orders)
     total = Order.objects.count()
+    paginator = Paginator(orders, 20)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
 
     context = {
-        'page_obj': page_obj,
+        'orders': page_obj,
         'pending': pending,
         'in_transit': in_transit,
         'received': received,
