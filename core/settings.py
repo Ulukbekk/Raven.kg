@@ -67,32 +67,32 @@ TEMPLATES = [
 WSGI_APPLICATION = 'core.wsgi.application'
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 #
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'dbdq3vicu6vuc0',
-#         'USER': 'clcksrrquywqja',
-#         'PASSWORD': '6c9a97a0f4113562c2557d84fd074c47eb09340a16ad4143ba4ae80cb595bc80',
-#         'HOST': 'ec2-18-211-41-246.compute-1.amazonaws.com',
-#         'PORT': '5432',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd9fsj5qe364n2q',
+        'USER': 'aujgfvuigmsxzm',
+        'PASSWORD': '888498d967ce79d0c74585d2c9f40e9c9dd27e52501e48722d95e9850c894397',
+        'HOST': 'ec2-3-210-29-54.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+}
 #
 # db_from_env = dj_database_url.config(conn_max_age=600)
 # DATABASES['default'].update(db_from_env)
 
-
+# postgres://aujgfvuigmsxzm:888498d967ce79d0c74585d2c9f40e9c9dd27e52501e48722d95e9850c894397@ec2-3-210-29-54.compute-1.amazonaws.com:5432/d9fsj5qe364n2q
 #postgres://clcksrrquywqja:6c9a97a0f4113562c2557d84fd074c47eb09340a16ad4143ba4ae80cb595bc80@ec2-18-211-41-246.compute-1.amazonaws.com:5432/dbdq3vicu6vuc0
 
 
